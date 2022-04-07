@@ -1,5 +1,5 @@
 import React from 'react'
-import "./lst.scss"
+import "./list.scss"
 
 const List = () => {
   return (
