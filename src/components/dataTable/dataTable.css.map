@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACR,MAAM,EAAE,KAAK;CACd",
+    "sources": [
+        "dataTable.scss"
+    ],
+    "names": [],
+    "file": "dataTable.css"
+}
