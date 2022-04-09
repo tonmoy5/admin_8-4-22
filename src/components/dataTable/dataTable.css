@@ -1,4 +1,69 @@
 .dataTable {
-  height: 500px;
+  height: calc(100vh - 100px);
+  padding: 20px;
+}
+
+.dataTable .cellWithImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dataTable .cellWithImg .cellImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 20px;
+}
+
+.dataTable .cellWithStatus {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dataTable .cellWithStatus.active {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.312);
+}
+
+.dataTable .cellWithStatus.pending {
+  color: goldenrod;
+  background-color: rgba(255, 165, 0, 0.312);
+}
+
+.dataTable .cellWithStatus.passive {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.312);
+}
+
+.dataTable .cellAction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.dataTable .cellAction .viewButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: darkblue;
+  border: 1px dotted rgba(0, 0, 255, 0.312);
+  cursor: pointer;
+}
+
+.dataTable .cellAction .deleteButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: crimson;
+  border: 1px dotted rgba(220, 20, 60, 0.312);
+  cursor: pointer;
 }
 /*# sourceMappingURL=dataTable.css.map */
