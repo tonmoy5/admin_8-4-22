@@ -37,6 +37,7 @@ const DataTable = () => {
         pageSize={10}
         checkboxSelection
         disableSelectionOnClick
+        className='datagrid'
       />
     </div>
   )
