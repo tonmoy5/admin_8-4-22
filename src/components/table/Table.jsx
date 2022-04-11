@@ -80,7 +80,7 @@ const List = () => {
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Tracking Id</TableCell>
+            <TableCell className='tableCell'>Tracking Id</TableCell>
             <TableCell className='tableCell'>Product</TableCell>
             <TableCell className='tableCell'>Customer</TableCell>
             <TableCell className='tableCell'>Date</TableCell>
