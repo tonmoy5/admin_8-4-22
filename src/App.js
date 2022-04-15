@@ -4,6 +4,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
@@ -17,28 +18,61 @@ import { useContext } from "react";
 function App() {
 
   const { darkMode } = useContext(DarkModeContext);
+  const currentUser = false;
+
+  const ReqireAuth = ({ children }) => {
+    return currentUser ? (children) : <Navigate to="/login" />
+  }
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
         <Routes>
           <Route path="/">
-            <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
+            <Route index element={
+              <ReqireAuth>
+                <Home />
+              </ReqireAuth>
+            } />
             <Route path="users">
-              <Route index element={<List />} />
-              <Route path=":userId" element={<Single />} />
-              <Route path="new" element={<New inputs={userInputs} title="Add New User" />} />
+              <Route index element={
+                <ReqireAuth>
+                  <List />
+                </ReqireAuth>
+              } />
+              <Route path=":userId" element={
+                <ReqireAuth>
+                  <Single />
+                </ReqireAuth>
+              } />
+              <Route path="new" element={
+                <ReqireAuth>
+                  <New inputs={userInputs} title="Add New User" />
+                </ReqireAuth>
+              } />
             </Route>
             <Route path="products">
-              <Route index element={<List />} />
-              <Route path=":productId" element={<Single />} />
-              <Route path="new" element={<New inputs={productInputs} title="Add New Product" />} />
+              <Route index element={
+                <ReqireAuth>
+                  <List />
+                </ReqireAuth>
+              } />
+              <Route path=":productId" element={
+                <ReqireAuth>
+                  <Single />
+                </ReqireAuth>
+              } />
+              <Route path="new" element={
+                <ReqireAuth>
+                  <New inputs={productInputs} title="Add New Product" />
+                </ReqireAuth>
+              } />
             </Route>
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </div >
   );
 }
 
