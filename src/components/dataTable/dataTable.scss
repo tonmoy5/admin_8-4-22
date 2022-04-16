@@ -1,7 +1,7 @@
-.dataTable{
-  height: calc(100vh - 100px);
+.datatable {
+  height: 600px;
   padding: 20px;
-
+  
   .datatableTitle{
     width: 100%;
     font-size: 24px;
@@ -19,15 +19,15 @@
       border: 1px solid green;
       padding: 5px;
       border-radius: 5px;
+      cursor: pointer;
     }
   }
 
-  .cellWithImg{
+  .cellWithImg {
     display: flex;
     align-items: center;
 
-
-    .cellImg{
+    .cellImg {
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -36,45 +36,42 @@
     }
   }
 
-  .cellWithStatus{
+  .cellWithStatus {
     padding: 5px;
     border-radius: 5px;
 
-
-    &.active{
+    &.active {
+      background-color: rgba(0, 128, 0, 0.05);
       color: green;
-      background-color: rgba(0, 128, 0, 0.312);
     }
-
-    &.pending{
+    &.pending {
+      background-color: rgba(255, 217, 0, 0.05);
       color: goldenrod;
-      background-color: rgba(255, 165, 0, 0.312);
     }
-
-    &.passive{
-      color: red;
-      background-color: rgba(255, 0, 0, 0.312);
+    &.passive {
+      background-color: rgba(255, 0, 0, 0.05);
+      color: crimson;
     }
   }
 
-  .cellAction{
+  .cellAction {
     display: flex;
     align-items: center;
     gap: 15px;
 
-    .viewButton{
+    .viewButton {
       padding: 2px 5px;
       border-radius: 5px;
       color: darkblue;
-      border:1px dotted rgba(0, 0, 255, 0.312);
+      border: 1px dotted rgba(0, 0, 139, 0.596);
       cursor: pointer;
     }
-
-    .deleteButton{
+    
+    .deleteButton {
       padding: 2px 5px;
       border-radius: 5px;
       color: crimson;
-      border:1px dotted rgba(220, 20, 60, 0.312);
+      border: 1px dotted rgba(220, 20, 60, 0.6);
       cursor: pointer;
     }
   }
